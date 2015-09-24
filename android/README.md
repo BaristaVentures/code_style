@@ -79,14 +79,14 @@ Layout files should match the name of the Android components that they are inten
   - `where` _ `view_type` _ `content_type` _ `description`
   - `where` _ `view_type` _ `description`
 
-|             Component            |         Class         |  Where  | View Type |          Content Type         |   Description   |                             Id                            |
-|:--------------------------------:|:---------------------:|:-------:|:---------:|:-----------------------------:|:---------------:|:-----------------------------------------------------------:|
-| Button "cancel"                  | LoginActivity         | login   | button    | -                             | cancel          | login_button_cancel                                         |
-| Progress dialog "loading orders" | OrdersActivity        | orders  | progress  | -                             | loading         | orders_progress_loading                                     |
-| Label "total actions"            | ActionsActivity       | actions | label     | -                             | total           | actions_label_total                                         |
-| Label "total heroes"             | TipActivity           | tip     | label     | -                             | total_heroes    | tip_label_total_heroes                                      |
-| Label "total orders"             | TipActivity           | tip     | label     | -                             | total_orders    | tip_label_total_orders                                      |
-| Dialog "Supported Weight"        | AddressPickerActivity | address | dialog    | weight_title / weight_message | title / message | address_dialog_weight_title / address_dialog_weight_message |
+|             Component            |          Class          |  Where  | View Type |   Content Type  |   Description   |                               Name                              |
+|:--------------------------------:|:-----------------------:|:-------:|:---------:|:---------------:|:---------------:|:---------------------------------------------------------------:|
+|          Button "cancel"         |     `LoginActivity`     |  login  |   button  |        -        |      cancel     |                      `login_button_cancel`                      |
+| Progress dialog "loading orders" |     `OrdersActivity`    |  orders |  progress |        -        |     loading     |                    `orders_progress_loading`                    |
+|       Label "total actions"      |    `ActionsActivity`    | actions |   label   |        -        |      total      |                      `actions_label_total`                      |
+|       Label "total heroes"       |      `TipActivity`      |   tip   |   label   |        -        |   total_heroes  |                     `tip_label_total_heroes`                    |
+|       Label "total orders"       |      `TipActivity`      |   tip   |   label   |        -        |   total_orders  |                     `tip_label_total_orders`                    |
+|     Dialog "Supported Weight"    | `AddressPickerActivity` | address |   dialog  | weight / weight | title / message | `address_dialog_weight_title` / `address_dialog_weight_message` |
 
 ## Values
 
