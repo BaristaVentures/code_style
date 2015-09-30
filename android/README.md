@@ -3,6 +3,7 @@ Null Android Styles
 
 # Table of Contents
 
+* [Git Ignore](#gitignore)
 * [File Names](#file_names)
 * [Res folder](#res_folder)
 	* [Layouts](#layouts)
@@ -12,6 +13,11 @@ Null Android Styles
 	* [Installation](#installation)
 * [License](#license)
 * [Inspiration](#inspiration)
+
+<a name="gitignore"/>
+# Gitignore
+
+Put [.gitignore](.gitignore) file on root for every project.
 
 <a name="file_names"/>
 # File Names
@@ -93,17 +99,10 @@ Layout files should match the name of the Android components that they are inten
 Resource files in the values folder should be *plural*, e.g. `strings.xml`, `styles.xml`, `colors.xml`, `dimens.xml`, `attrs.xml`
 
 <a name="intellij_ide"/>
-# Intellij IDEA (Android Studio) clean/autoformat settings
+# Android Studio clean/autoformat settings
 
 IntelliJ IDEA code style settings for Null Industries's Java and Android projects.
-
-<a name="installation"/>
-## Installation
-
-1. Run the `install.sh` script.
-1. Restart IntelliJ if it's running.
-1. Open IntelliJ Project Settings -> Code Styles, change the code style for the
-  project to the one you want.
+Check [install help](android_studio/README.md) to see how to install it on your own Android Studio.
 
 <a name="license"/>
 # License
