@@ -3,16 +3,21 @@ Null Android Styles
 
 # Table of Contents
 
+* [Android Studio settings](#android_studio)
 * [Git Ignore](#gitignore)
 * [File Names](#file_names)
 * [Res folder](#res_folder)
 	* [Layouts](#layouts)
 	* [Strings](#strings)
 	* [Views](#views)
-* [Intellij IDEA (Android Studio) settings](#intellij_ide)
-	* [Installation](#installation)
 * [License](#license)
 * [Inspiration](#inspiration)
+
+<a name="android_studio"/>
+# Android Studio clean/autoformat settings
+
+IntelliJ IDEA code style settings for Null Industries's Java and Android projects. 
+Setup files and [install help](android_studio_settings/README.md) are in `android_studio_settings/`.
 
 <a name="gitignore"/>
 # Gitignore
@@ -97,12 +102,6 @@ Layout files should match the name of the Android components that they are inten
 ## Values
 
 Resource files in the values folder should be *plural*, e.g. `strings.xml`, `styles.xml`, `colors.xml`, `dimens.xml`, `attrs.xml`
-
-<a name="intellij_ide"/>
-# Android Studio clean/autoformat settings
-
-IntelliJ IDEA code style settings for Null Industries's Java and Android projects.
-Check [install help](android_studio/README.md) to see how to install it on your own Android Studio.
 
 <a name="license"/>
 # License
