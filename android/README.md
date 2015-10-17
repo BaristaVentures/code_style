@@ -3,6 +3,7 @@ Null Android Styles
 
 # Table of Contents
 
+* [Bug Report](bug_report.md)
 * [Android Studio settings](#android_studio)
 * [Git Ignore](#gitignore)
 * [File Names](#file_names)
