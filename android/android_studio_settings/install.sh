@@ -16,7 +16,7 @@ do
     cp -frv "$CONFIGS/codestyles"/* $i/codestyles
 
     # Install inspections
-    mkdir -p $i/inspection
+    mkdir -p $i/templates
     cp -frv "$CONFIGS/templates"/* $i/templates
   fi
 done
