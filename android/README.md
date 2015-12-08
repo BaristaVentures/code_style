@@ -43,15 +43,15 @@ Explain how `app/src/main/res` folder is managed.
 <a name="layouts"/>
 ## Layouts
 
-Layout files should match the name of the Android components that they are intended for but moving the top level component name to the beginning. For example, if we are creating a layout for the `SignInActivity`, the name of the layout file should be `activity_sign_in.xml`.
+Layout files should match the name of the Android components that they are intended for but moving the top level component name to the beginning. For example, if we are creating a layout for the `SignInActivity`, the name of the layout file should be `sign_in_activity.xml`.
 
 |     Component    |       Class Name       |          Layout Name         |
 |:----------------:|:----------------------:|:----------------------------:|
-| Activity         | `UserProfileActivity`  | `activity_user_profile.xml`  |
-| Fragment         | `SignUpFragment`       | `fragment_sign_up.xml`       |
-| Dialog           | `ChangePasswordDialog` | `dialog_change_password.xml` |
-| AdapterView item | ---                    | `item_person.xml`            |
-| Partial layout   | ---                    | `partial_stats_bar.xml`      |
+| Activity         | `UserProfileActivity`  | `user_profile_activity.xml`  |
+| Fragment         | `SignUpFragment`       | `sign_up_fragment.xml`       |
+| Dialog           | `ChangePasswordDialog` | `change_password_dialog.xml` |
+| AdapterView item | ---                    | `person_item.xml`            |
+| Partial layout   | ---                    | `stats_bar_partial.xml`      |
 
 <a name="strings"/>
 ## Strings
