@@ -1,4 +1,4 @@
-<code_scheme name="NullAndroid">
+<code_scheme name="BaristaAndroid">
   <option name="USE_SAME_INDENTS" value="true" />
   <option name="IGNORE_SAME_INDENTS_FOR_LANGUAGES" value="true" />
   <option name="OTHER_INDENT_OPTIONS">
@@ -201,7 +201,6 @@
     <option name="DOWHILE_BRACE_FORCE" value="1" />
     <option name="WHILE_BRACE_FORCE" value="1" />
     <option name="FIELD_ANNOTATION_WRAP" value="0" />
-    <option name="VARIABLE_ANNOTATION_WRAP" value="2" />
     <option name="PARENT_SETTINGS_INSTALLED" value="true" />
     <indentOptions>
       <option name="INDENT_SIZE" value="2" />
