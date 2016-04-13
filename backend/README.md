@@ -12,3 +12,11 @@ Status codes for common escenarious:
 
 * Force update:
     - `412`: If the user have an app version that should be updated.    
+    - 
+    - 
+    - 
+
+Naming Convention
+------------------
+
+* Parameters: lower case with _ as divider like: `first_name`.
