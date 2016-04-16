@@ -1,4 +1,4 @@
-echo "Installing Null Industries IntelliJ configs..."
+echo "Installing Barista Ventures IntelliJ configs..."
 
 CONFIGS="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/configs"
 
@@ -23,4 +23,4 @@ done
 
 echo "Done."
 echo ""
-echo "Restart IntelliJ and/or AndroidStudio, go to preferences, and apply 'Null' or 'NullAndroid'."
+echo "Restart IntelliJ and/or AndroidStudio, go to preferences, and apply 'Barista' or 'BaristaAndroid'."

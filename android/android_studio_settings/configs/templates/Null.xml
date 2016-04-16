@@ -1,0 +1,127 @@
+<templateSet group="Null">
+  <template name="j_test_setup" value="@Before&#10;public void setUp() {&#10;  MockitoAnnotations.initMocks(this);&#10;}" description="Test setup" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_COMMENT" value="true" />
+      <option name="JAVA_STRING" value="true" />
+      <option name="COMPLETION" value="true" />
+    </context>
+  </template>
+  <template name="j_test_mock" value="$name$ = mock($class$.class);" description="Mock a class" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="class" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_STATEMENT" value="false" />
+      <option name="JAVA_EXPRESSION" value="true" />
+      <option name="JAVA_DECLARATION" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="true" />
+    </context>
+  </template>
+  <template name="j_test_method" value="@Test&#10;public void test_$name$() {&#10;&#10;}" description="Create the template for a test method" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="false" />
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="j_casting" value="$class$ $name$ = ($class$) o;" description="Template for variable casting" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+    <variable name="class" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_EXPRESSION" value="true" />
+    </context>
+  </template>
+  <template name="j_constant_s" value="public static final String $name$ = $value$;" description="String Constant" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="false" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="j_constant_i" value="public static final int $name$ = $value$;" description="Integer Constant" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="false" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="j_def_int" value="@IntDef(value = { $constant$ })&#10;@Retention(RetentionPolicy.SOURCE)&#10;public @interface $name$ {&#10;}" description="Define Int Interface" toReformat="false" toShortenFQNames="true">
+    <variable name="constant" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="false" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="j_def_string" value="@StringDef(value = { $constant$ })&#10;@Retention(RetentionPolicy.SOURCE)&#10;public @interface $name$ {&#10;}" description="Define Int Interface" toReformat="false" toShortenFQNames="true">
+    <variable name="constant" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="false" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="k_test_setup" value="private lateinit var presenter: $class$&#10;&#10;@Before&#10;fun setUp() {&#10;    MockitoAnnotations.initMocks(this)&#10;    presenter = $class$()&#10;}" description="Test setup" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+    <variable name="class" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_STATEMENT" value="false" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="JAVA_DECLARATION" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="false" />
+    </context>
+  </template>
+  <template name="k_test_method" value="@Test&#10;fun test_$name$() {&#10;  &#10;}" description="Create the template for a test method" toReformat="true" toShortenFQNames="true" useStaticImport="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_STATEMENT" value="false" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="JAVA_DECLARATION" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="false" />
+    </context>
+  </template>
+  <template name="x_activity_portrait" value="&lt;activity&#10;      android:name=&quot;$name$&quot;&#10;      android:configChanges=&quot;keyboardHidden|orientation&quot; /&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="k_activity_back" value="// Respond to the action bar's Up button&#10;override fun onOptionsItemSelected(item: MenuItem): Boolean {&#10;    when (item.itemId) {&#10;        android.R.id.home -&gt; {&#10;            onBackPressed()&#10;            return true&#10;        }&#10;        else -&gt; return super.onOptionsItemSelected(item)&#10;    }&#10;}" description="Back management from menu." toReformat="false" toShortenFQNames="true">
+    <context />
+  </template>
+  <template name="x_activity_fixed" value="&lt;activity&#10;      android:name=&quot;$name$&quot;&#10;      android:configChanges=&quot;orientation|keyboardHidden&quot;&#10;      android:label=&quot;$label$&quot;&#10;      android:screenOrientation=&quot;portrait&quot; /&gt;" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="label" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="k_delegate_onActivityResult" value="override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {&#10;    super.onActivityResult(requestCode, resultCode, data);&#10;    supportFragmentManager?.fragments?.forEach {&#10;        it?.onActivityResult(requestCode, resultCode, data)&#10;    }&#10;}" description="Send on activity result to each child fragment." toReformat="false" toShortenFQNames="true">
+    <context />
+  </template>
+  <template name="k_mock" value="@Mock lateinit var $name$: $class$" description="Mocked variable." toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="class" expression="" defaultValue="" alwaysStopAt="true" />
+    <context />
+  </template>
+  <template name="k_import_assertThat" value="import org.assertj.core.api.Assertions.assertThat" description="Import for assertThat" toReformat="false" toShortenFQNames="true">
+    <context />
+  </template>
+</templateSet>

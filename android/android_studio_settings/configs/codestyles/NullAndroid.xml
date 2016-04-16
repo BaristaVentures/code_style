@@ -1,4 +1,4 @@
-<code_scheme name="BaristaAndroid">
+<code_scheme name="NullAndroid">
   <option name="USE_SAME_INDENTS" value="true" />
   <option name="IGNORE_SAME_INDENTS_FOR_LANGUAGES" value="true" />
   <option name="OTHER_INDENT_OPTIONS">
@@ -72,9 +72,6 @@
   <option name="PARAMETER_ANNOTATION_WRAP" value="1" />
   <option name="VARIABLE_ANNOTATION_WRAP" value="1" />
   <option name="ENUM_CONSTANTS_WRAP" value="1" />
-  <AndroidXmlCodeStyleSettings>
-    <option name="USE_CUSTOM_SETTINGS" value="true" />
-  </AndroidXmlCodeStyleSettings>
   <JavaCodeStyleSettings>
     <option name="CLASS_NAMES_IN_JAVADOC" value="3" />
   </JavaCodeStyleSettings>
@@ -137,7 +134,6 @@
   <codeStyleSettings language="Groovy">
     <option name="KEEP_LINE_BREAKS" value="false" />
     <option name="KEEP_FIRST_COLUMN_COMMENT" value="false" />
-    <option name="KEEP_CONTROL_STATEMENT_IN_ONE_LINE" value="false" />
     <option name="KEEP_BLANK_LINES_IN_DECLARATIONS" value="1" />
     <option name="KEEP_BLANK_LINES_IN_CODE" value="1" />
     <option name="KEEP_BLANK_LINES_BEFORE_RBRACE" value="0" />
@@ -192,10 +188,6 @@
     <option name="BINARY_OPERATION_SIGN_ON_NEXT_LINE" value="true" />
     <option name="TERNARY_OPERATION_WRAP" value="1" />
     <option name="TERNARY_OPERATION_SIGNS_ON_NEXT_LINE" value="true" />
-    <option name="KEEP_SIMPLE_BLOCKS_IN_ONE_LINE" value="true" />
-    <option name="KEEP_SIMPLE_METHODS_IN_ONE_LINE" value="true" />
-    <option name="KEEP_SIMPLE_CLASSES_IN_ONE_LINE" value="true" />
-    <option name="KEEP_MULTIPLE_EXPRESSIONS_IN_ONE_LINE" value="true" />
     <option name="FOR_STATEMENT_WRAP" value="1" />
     <option name="ARRAY_INITIALIZER_WRAP" value="1" />
     <option name="ARRAY_INITIALIZER_LBRACE_ON_NEXT_LINE" value="true" />
@@ -251,7 +243,7 @@
             <match>
               <AND>
                 <NAME>xmlns:android</NAME>
-                <XML_NAMESPACE>^$</XML_NAMESPACE>
+                <XML_NAMESPACE>Namespace:</XML_NAMESPACE>
               </AND>
             </match>
           </rule>
@@ -261,7 +253,7 @@
             <match>
               <AND>
                 <NAME>xmlns:.*</NAME>
-                <XML_NAMESPACE>^$</XML_NAMESPACE>
+                <XML_NAMESPACE>Namespace:</XML_NAMESPACE>
               </AND>
             </match>
             <order>BY_NAME</order>
@@ -395,12 +387,5 @@
         </section>
       </rules>
     </arrangement>
-  </codeStyleSettings>
-  <codeStyleSettings language="kotlin">
-    <option name="ALIGN_MULTILINE_METHOD_BRACKETS" value="true" />
-    <indentOptions>
-      <option name="INDENT_SIZE" value="2" />
-      <option name="CONTINUATION_INDENT_SIZE" value="4" />
-    </indentOptions>
   </codeStyleSettings>
 </code_scheme>
