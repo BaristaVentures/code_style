@@ -4,6 +4,8 @@ Null Android Styles
 # Table of Contents
 
 * [Bug Report](bug_report.md)
+* [Development Flow](dev-flow.md)
+* [Changelog](changelog.md)
 * [Android Studio settings](#android_studio)
 * [Git Ignore](#gitignore)
 * [File Names](#file_names)
