@@ -6,6 +6,7 @@ Null Android Styles
 * [Bug Report](bug_report.md)
 * [Development Flow](dev-flow.md)
 * [Changelog](changelog.md)
+* [Development Flow](dev-flow.md)
 * [Android Studio settings](#android_studio)
 * [Git Ignore](#gitignore)
 * [File Names](#file_names)
@@ -13,6 +14,7 @@ Null Android Styles
 	* [Layouts](#layouts)
 	* [Strings](#strings)
 	* [Views](#views)
+* [Bug Report](bug_report.md)
 * [License](#license)
 * [Inspiration](#inspiration)
 
