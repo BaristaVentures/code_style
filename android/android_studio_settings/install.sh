@@ -1,26 +1,24 @@
-echo "Installing Barista Ventures IntelliJ configs..."
+#!/usr/bin/env bash
+#
+# Install settings
+#
 
+
+PREFIX="-->"
 CONFIGS="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/configs"
+DESTINATION_PATH=$HOME/Library/Preferences/AndroidStudio*
 
-for i in $HOME/Library/Preferences/IntelliJIdea*  \
-         $HOME/Library/Preferences/IdeaIC*        \
-         $HOME/Library/Preferences/AndroidStudio* \
-         $HOME/.IntelliJIdea*/config              \
-         $HOME/.IdeaIC*/config                    \
-         $HOME/.AndroidStudio*/config
-do
-  if [ -d $i ]; then
+echo "$PREFIX Installing Barista Ventures IntelliJ configs..."
+if [ -d $DESTINATION_PATH ]; then
+    mkdir -p $DESTINATION_PATH/codestyles
+    cp -frv "$CONFIGS/codestyles"/barista*.xml $DESTINATION_PATH/codestyles
 
-    # Install codestyles
-    mkdir -p $i/codestyles
-    cp -frv "$CONFIGS/codestyles"/* $i/codestyles
+    mkdir -p $DESTINATION_PATH/templates
+    cp -frv "$CONFIGS/templates"/barista*.xml $DESTINATION_PATH/templates
 
-    # Install inspections
-    mkdir -p $i/templates
-    cp -frv "$CONFIGS/templates"/* $i/templates
-  fi
-done
+    cp -frv "$CONFIGS/studio.vmoptions" $DESTINATION_PATH
+fi
 
-echo "Done."
+echo "$PREFIX Done."
 echo ""
-echo "Restart IntelliJ and/or AndroidStudio, go to preferences, and apply 'Barista' or 'BaristaAndroid'."
+echo "$PREFIX Restart IntelliJ and/or AndroidStudio, go to preferences, and apply 'Barista' or 'BaristaAndroid'."

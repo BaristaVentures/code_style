@@ -83,12 +83,6 @@
       <option name="JAVA_COMMENT" value="false" />
       <option name="JAVA_STRING" value="false" />
       <option name="COMPLETION" value="false" />
-      <option name="KOTLIN" value="true" />
-      <option name="KOTLIN_TOPLEVEL" value="true" />
-      <option name="KOTLIN_STATEMENT" value="true" />
-      <option name="KOTLIN_CLASS" value="true" />
-      <option name="KOTLIN_EXPRESSION" value="true" />
-      <option name="KOTLIN_COMMENT" value="true" />
     </context>
   </template>
   <template name="k_test_method" value="@Test&#10;fun test_$name$() {&#10;  &#10;}" description="Create the template for a test method" toReformat="true" toShortenFQNames="true" useStaticImport="true">
@@ -101,12 +95,6 @@
       <option name="JAVA_COMMENT" value="false" />
       <option name="JAVA_STRING" value="false" />
       <option name="COMPLETION" value="false" />
-      <option name="KOTLIN" value="true" />
-      <option name="KOTLIN_TOPLEVEL" value="true" />
-      <option name="KOTLIN_STATEMENT" value="true" />
-      <option name="KOTLIN_CLASS" value="true" />
-      <option name="KOTLIN_EXPRESSION" value="true" />
-      <option name="KOTLIN_COMMENT" value="true" />
     </context>
   </template>
   <template name="x_activity_portrait" value="&lt;activity&#10;      android:name=&quot;$name$&quot;&#10;      android:configChanges=&quot;keyboardHidden|orientation&quot; /&gt;" toReformat="false" toShortenFQNames="true">
@@ -116,9 +104,7 @@
     </context>
   </template>
   <template name="k_activity_back" value="// Respond to the action bar's Up button&#10;override fun onOptionsItemSelected(item: MenuItem): Boolean {&#10;    when (item.itemId) {&#10;        android.R.id.home -&gt; {&#10;            onBackPressed()&#10;            return true&#10;        }&#10;        else -&gt; return super.onOptionsItemSelected(item)&#10;    }&#10;}" description="Back management from menu." toReformat="false" toShortenFQNames="true">
-    <context>
-      <option name="KOTLIN_CLASS" value="true" />
-    </context>
+    <context />
   </template>
   <template name="x_activity_fixed" value="&lt;activity&#10;      android:name=&quot;$name$&quot;&#10;      android:configChanges=&quot;orientation|keyboardHidden&quot;&#10;      android:label=&quot;$label$&quot;&#10;      android:screenOrientation=&quot;portrait&quot; /&gt;" toReformat="false" toShortenFQNames="true">
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
@@ -133,23 +119,43 @@
   <template name="k_mock" value="@Mock lateinit var $name$: $class$" description="Mocked variable." toReformat="false" toShortenFQNames="true">
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="class" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="KOTLIN" value="true" />
-      <option name="KOTLIN_TOPLEVEL" value="true" />
-      <option name="KOTLIN_STATEMENT" value="true" />
-      <option name="KOTLIN_CLASS" value="true" />
-      <option name="KOTLIN_EXPRESSION" value="true" />
-      <option name="KOTLIN_COMMENT" value="true" />
-    </context>
+    <context />
   </template>
   <template name="k_import_assertThat" value="import org.assertj.core.api.Assertions.assertThat" description="Import for assertThat" toReformat="false" toShortenFQNames="true">
+    <context />
+  </template>
+  <template name="j_get_intent" value="public static Intent getIntent(Activity activity, $extra$) {&#10;  Intent intent = new Intent(activity, TipActivity.class);&#10;  intent.$extra_type$($extra_name$, $extra$);&#10;  return intent;&#10;}" description="get intent pattern for activities with extras" toReformat="false" toShortenFQNames="true">
+    <variable name="extra" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="extra_type" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="extra_name" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
-      <option name="KOTLIN" value="true" />
-      <option name="KOTLIN_TOPLEVEL" value="true" />
-      <option name="KOTLIN_STATEMENT" value="true" />
-      <option name="KOTLIN_CLASS" value="true" />
-      <option name="KOTLIN_EXPRESSION" value="true" />
-      <option name="KOTLIN_COMMENT" value="true" />
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_COMMENT" value="true" />
+      <option name="JAVA_STRING" value="true" />
+      <option name="COMPLETION" value="true" />
+    </context>
+  </template>
+  <template name="x_margin_horizontal" value="android:layout_marginLeft=&quot;@dimen/activity_margin&quot;&#10;android:layout_marginRight=&quot;@dimen/activity_margin&quot;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="x_appearance" value="android:textAppearance=&quot;@style/TextAppearance.AppCompat.Body1&quot;" description="Text Appearance" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="x_main_activity" value="&lt;intent-filter&gt;&#10;  &lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt;&#10;  &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt;&#10;&lt;/intent-filter&gt;" description="Intent Filter for launcher activity" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
     </context>
   </template>
 </templateSet>

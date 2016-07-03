@@ -6,7 +6,6 @@
 # 
 
 -XX:MaxPermSize=8G
-
 -XX:ReservedCodeCacheSize=2G
 
 # Runs JVM in Server mode with more optimizations and resources usage
@@ -15,14 +14,14 @@
 -server
 
 # Sets the initial size of the heap, default value is 256m
--Xms8G
+-Xms4G
 
 # Max size of the memory allocation pool, default value is 1280m
--Xmx8G
+-Xmx4G
 
 # Sets the size of the allocated class metadata space that will trigger a GC the first time it is exceeded, defaul max value is 350m 
--XX:MetaspaceSize=8G
+-XX:MetaspaceSize=4G
 
 # Disables the use of compressed pointers, by default JVM compresses pointers to use less memory, but slows application down.
--XX:-UseCompressedOops
+#-XX:-UseCompressedOops
 #-XX:+UseCompressedOops
