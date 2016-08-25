@@ -19,4 +19,4 @@ Status codes for common escenarious:
 Naming Convention
 ------------------
 
-* Parameters: lower case with _ as divider like: `first_name`.
+* Variables: lower case with - as divider like: `first-name`.
