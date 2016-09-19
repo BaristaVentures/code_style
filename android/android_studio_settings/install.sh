@@ -6,7 +6,7 @@
 
 PREFIX="-->"
 CONFIGS="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/configs"
-DESTINATION_PATH=$HOME/Library/Preferences/AndroidStudio*
+DESTINATION_PATH=$HOME/Library/Preferences/AndroidStudio2.2
 
 echo "$PREFIX Installing Barista Ventures IntelliJ configs..."
 if [ -d $DESTINATION_PATH ]; then
