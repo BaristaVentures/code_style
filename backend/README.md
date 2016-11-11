@@ -11,9 +11,23 @@ Status codes for common escenarious:
 	- `200`: If the user exists in the db, should return the session token.
 
 * Force update:
-    	- `412`: If the user have an app version that should be updated.    
+	- `426`: If the user have an app version that should be updated.    
 
 Naming Convention
 ------------------
 
 * Variables: lower case with - as divider like: `first-name`.
+
+Errors
+--------------
+
+All errors from backend should have in body:
+
+```
+{
+  "errors": {
+    "field1": "message1",
+    "field2": "message2"
+  }
+}
+```
