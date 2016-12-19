@@ -3,7 +3,7 @@ Code styles, and tools for different languages
 
 # General conventions
 
-- Mobile Clients should always send the next headers for every request with our api: 
+- Clients should send the next headers on every request to our api: 
 
   * `bv-app-version`: `platform/typeApp/version/build` _where_:
   
