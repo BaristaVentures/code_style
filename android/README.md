@@ -12,8 +12,6 @@ Barista Android Styles
 * [File Names](#file_names)
 * [Res folder](#res_folder)
 	* [Layouts](#layouts)
-	* [Strings](#strings)
-	* [Views](#views)
 * [Bug Report](bug_report.md)
 * [License](#license)
 * [Inspiration](#inspiration)
@@ -58,51 +56,6 @@ Layout files should match the name of the Android components that they are inten
 | Partial layout   | ---                    | `stats_bar_partial.xml`      |
 
 <a name="strings"/>
-## Strings
-
-1. Name (`<string name="____">`): every string id should:
-  - `where` _ `view_type` _ `content_type` _ `description`
-  - `where` _ `view_type` _ `description`
-
-|             Component            |         Class         |  Where  | View Type |          Content Type         |   Description   |                             Name                            |
-|:--------------------------------:|:---------------------:|:-------:|:---------:|:-----------------------------:|:---------------:|:-----------------------------------------------------------:|
-| Button "cancel"                  | LoginActivity         | login   | button    | -                             | cancel          | login_button_cancel                                         |
-| Progress dialog "loading orders" | OrdersActivity        | orders  | progress  | -                             | loading         | orders_progress_loading                                     |
-| Label "total actions"            | ActionsActivity       | actions | label     | -                             | total           | actions_label_total                                         |
-| Label "total heroes"             | TipActivity           | tip     | label     | -                             | total_heroes    | tip_label_total_heroes                                      |
-| Label "total orders"             | TipActivity           | tip     | label     | -                             | total_orders    | tip_label_total_orders                                      |
-| Dialog "Supported Weight"        | AddressPickerActivity | address | dialog    | weight_title / weight_message | title / message | address_dialog_weight_title / address_dialog_weight_message |
-
-1. Values (`<string name="">______</string>`): follow [google rules](https://www.google.com/design/spec/style/writing.html#))
-
-1. Divide every group with a space and a comment (`<!-- Class and maybe a 3/4 words description -->`) :
-
-*Example*:
-```xml
-    <!-- Phone Validation -->
-    <string name="phone_button_verify">VERIFY</string>
-    <string name="phone_button_continue">CONTINUE</string>
-
-    <!-- Code Validation -->
-    <string name="code_button_cancel">@android:string/cancel</string>
-    <string name="code_button_verify">VERIFY CODE</string>
-```
-
-<a name="views"/>
-## Views
-
-1. Id (`android:id`): every view id should be composed by one of the next rules:
-  - `where` _ `view_type` _ `content_type` _ `description`
-  - `where` _ `view_type` _ `description`
-
-|             Component            |          Class          |  Where  | View Type | Content Type |   Description   |                               Name                              |
-|:--------------------------------:|:-----------------------:|:-------:|:---------:|:------------:|:---------------:|:---------------------------------------------------------------:|
-|          Button "cancel"         |     `LoginActivity`     |  login  |   button  |       -      |      cancel     |                      `login_button_cancel`                      |
-| Progress dialog "loading orders" |     `OrdersActivity`    |  orders |  progress |       -      |     loading     |                    `orders_progress_loading`                    |
-|       Label "total actions"      |    `ActionsActivity`    | actions |   label   |       -      |      total      |                      `actions_label_total`                      |
-|       Label "total heroes"       |      `TipActivity`      |   tip   |   label   |       -      |   total_heroes  |                     `tip_label_total_heroes`                    |
-|       Label "total orders"       |      `TipActivity`      |   tip   |   label   |       -      |   total_orders  |                     `tip_label_total_orders`                    |
-|     Dialog "Supported Weight"    | `AddressPickerActivity` | address |   dialog  |    weight    | title / message | `address_dialog_weight_title` / `address_dialog_weight_message` |
 
 ## Values
 
