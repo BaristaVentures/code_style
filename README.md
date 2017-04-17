@@ -5,7 +5,7 @@ Code styles, and tools for different languages
 
 - Clients should send the next headers on every request to our api:
 
-  * `bv-app-version`: `platform/typeApp/version/build` (***each value separated by a `/`***) _where_:
+  * `bv-app-version`: `platform/typeApp/version/build` (**each value separated by `/`**) where:
 
     - `platform`: platform who make the request in lower case (ej: ios, android)
     - `typeApp`: app profile who make the request in lower case (ej: customer, driver, admin) if there are only one app could be mobile for mobile apps
