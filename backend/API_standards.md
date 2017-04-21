@@ -93,6 +93,11 @@ Input validation example:
   "password": "Invalid length, it should be at least 8 characters"}
 ```
 
+For those fields accepting collections, the error should point to the specific index with errors, example:
+```json
+{ "subtopics": {"0": "Invalid subtopic identifier",
+                "3": "The subtopic was already associated"}}
+
 Validations will return status code `412` (precondition failed)
 
 ### Force updates
