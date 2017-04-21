@@ -96,4 +96,41 @@ Input validation example:
 Validations will return status code `412` (precondition failed)
 
 ### Force updates
-Check backend document for force updates
+Check [Backend document](readme.md) for more details about force updates handling.
+
+### Uploads
+Multipart and binary block uploads should be avoided at all cost.
+Instead we encourage the API consumer to upload file to S3 and provide the resulting URL/resource to the API.
+
+### Endpoint contracts and entities
+Each endpoint should have a shared [schema](https://github.com/plumatic/schema), entities reduction is encouraged so we all schemas can be match with entities on both backend and frontend.
+
+## API Versioning
+TODO
+
+## Integration with 3rd party API's
+TODO
+
+## OAuth
+TODO
+
+## Logging
+TODO
+
+## Other topics
+
+### Date/time timezones handling
+TODO
+
+## Multilanguages
+
+### Barista Framework
+There is a set of components that are spread and/or duplicated across several projects, but can be tied up as a `clojar` package in order to be reused seamless on all API's.
+
+- CORS ruler
+- Schema errors humanizer
+- Authorization middleware
+- API integrations (S3, Sendgrid, OneSignal)
+- Error humanizer
+- Current set of utils helpers (validators, dates, parsers, paginator, etc)
+- Luminus template with the Registration/Authentication workflow
