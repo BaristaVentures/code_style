@@ -33,3 +33,16 @@ All errors from backend should have in body:
   }
 }
 ```
+* Foce Update:
+	- error have to include a message to show in the alert
+	- error have to include an URL for the app redirect
+
+error response will be in the following format:
+```
+{
+  "errors": {
+    "message": "message1",
+    "url": "http://example.com"
+  }
+}
+```
