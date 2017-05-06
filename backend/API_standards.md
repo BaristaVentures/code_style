@@ -88,15 +88,39 @@ Response Example:
 All errors should follow the same `key: value` structure, each key represent the specific attribute with error.
 
 Input validation example:
+Error example:
 ```json
-{ "email": "Invalid email format",
-  "password": "Invalid length, it should be at least 8 characters"}
+{
+  "errors": [
+    {
+      "message": "The email haves an invalid format",
+      "attribute": "email"
+    },
+    {
+      "message": "The password length should be at least 8 characters",
+      "attribute": "password"
+    }
+  ]
+}
 ```
 
 For those fields accepting collections, the error should point to the specific index with errors, example:
 ```json
-{ "subtopics": {"0": "Invalid subtopic identifier",
-                "3": "The subtopic was already associated"}}
+{
+  "errors": [
+    {
+      "message": "User not found, invalid identifier",
+      "attribute": "user_ids",
+      "position": 1
+    },
+    {
+      "message": "The user was already associated with the book",
+      "attribute": "user_ids",
+      "position": 2
+    }
+  ]
+}
+```
 
 Validations will return status code `412` (precondition failed)
 
@@ -128,14 +152,4 @@ TODO
 TODO
 
 ## Multilanguages
-
-### Barista Framework
-There is a set of components that are spread and/or duplicated across several projects, but can be tied up as a `clojar` package in order to be reused seamless on all API's.
-
-- CORS ruler
-- Schema errors humanizer
-- Authorization middleware
-- API integrations (S3, Sendgrid, OneSignal)
-- Error humanizer
-- Current set of utils helpers (validators, dates, parsers, paginator, etc)
-- Luminus template with the Registration/Authentication workflow
+TODO
