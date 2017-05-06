@@ -6,12 +6,14 @@ Common cases
 Status codes for common scenarios:
 
 * General:
-        - `424 Failed Dependency`: If the social access token is for a valid user but the user doesn't exist on the db.
+        - `200 Ok`: If the user exists in the db, should return the session token.
+        - `201 Created`: The resource was created.
+        - `202 Accepted`: The request was processed and will be processed asap
         - `401 Unauthorized`: If the social access token is invalid (checked with Facebook or Google SDK).
-        - `200 ok`: If the user exists in the db, should return the session token.
         - `403 Forbidden`: The user might be authenticated but does not have the necessary permissions
+        - `404 Not Found`: The resource identifier is invalid or not recognized by the server
         - `426`: If the client have an incompatible app version that needs to be updated
-        - `412 Precondition Failed`: The server doesn't meet the preconditions to process the request (i.e. invalid state or validation)
+        - `412 Precondition Failed`: There is ho precondition guaranties to process the request (validations)
 
 * Force update:
         - `426`: If the user have an app version that should be updated.
@@ -43,6 +45,7 @@ Error example:
 {
   "errors": [
     {
+      "title": "Invalid request origin",
       "message": "Invalid origin, the request has been refused"
     }
   ]

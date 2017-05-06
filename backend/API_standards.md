@@ -85,18 +85,44 @@ Response Example:
 ```
 
 ### Error Handling
-All errors should follow the same `key: value` structure, each key represent the specific attribute with error.
 
-Input validation example:
-Error example:
+All errors should follow the same structure, each error object in the collection represent one single error.
+
+The error object will always respond to the following attributes:
+- message
+- title
+
+But other (optional) attributes could be added when needed
+- attribute
+- position
+- code
+- url
+
+In general a `412 Precondition failed` will be used, please refer to the [Status Codes](status_codes) section for other scenarios references.
+
+Not Found example:
 ```json
 {
   "errors": [
     {
+      "title": "Resource not found",
+      "message": "User not found, please check your identifier"
+    }
+  ]
+}
+```
+
+Validation error example:
+```json
+{
+  "errors": [
+    {
+      "title": "Invalid format",
       "message": "The email haves an invalid format",
       "attribute": "email"
     },
     {
+      "title": "Invalid format",
       "message": "The password length should be at least 8 characters",
       "attribute": "password"
     }
@@ -109,11 +135,13 @@ For those fields accepting collections, the error should point to the specific i
 {
   "errors": [
     {
+      "title": "Record not found",
       "message": "User not found, invalid identifier",
       "attribute": "user_ids",
       "position": 1
     },
     {
+      "title": "Duplicated record",
       "message": "The user was already associated with the book",
       "attribute": "user_ids",
       "position": 2
