@@ -8,12 +8,12 @@ echo "$PREFIX Backing up Barista Ventures IntelliJ configs..."
 
 DATE_TIME=$(date '+%d/%m/%Y %H:%M:%S');
 CONFIGS="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/configs"
-DESTINATION_PATH=$HOME/Library/Preferences/AndroidStudio2.1
+DESTINATION_PATH=$HOME/Library/Preferences/AndroidStudio2.3
 
 if [ -d $DESTINATION_PATH ]; then
     cp -frv $DESTINATION_PATH/codestyles/barista*.xml "$CONFIGS/codestyles"
     cp -frv $DESTINATION_PATH/templates/Barista*.xml "$CONFIGS/templates"
-    cp -frv "$DESTINATION_PATH/studio.vmoptions" "$CONFIGS/studio.vmoptions" 
+    cp -frv $DESTINATION_PATH/studio.vmoptions "$CONFIGS/studio.vmoptions" 
 else
     echo "$PREFIX Looks like you have another version of android studio since
     we didnt find $DESTINATION_PATH folder. Please update the script with your version"
