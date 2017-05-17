@@ -9,9 +9,11 @@ This process is both the big picture of every project and the small day to day l
     1. [Basic Info](#basic)
 2. [Planning and estimating](#planning)
     * [Pivotal](#pivotal)
+    * [What's the weekly meeting for](#weeklym)
     * [Repository structure](#structure)
     * [Pull Requests](#pr)
 3. [Executing and deploying](#execution)
+   * [What's the daily for](#daily)
    * [CI](#ci)
    * [Extra cards](#cards)
    * [Reporting bugs](#bugs)
@@ -38,7 +40,11 @@ Missing
 ### Pivotal <a name="pivotal"></a> 
 Missing
 
+### What's the weekly meeting for<a name="weeklym"></a> 
+Missing
+
 ### Repository Structure <a name="structure"></a>
+Missing
 
 ### PullRequests <a name="pr"></a> 
 Missing
@@ -47,6 +53,8 @@ Missing
 ## Executing and deplying <a name="execution"></a>
 Missing
 
+### What's the daily for <a name="daily"></a> 
+Missing
 
 ### CI <a name="ci"></a> 
 Missing
