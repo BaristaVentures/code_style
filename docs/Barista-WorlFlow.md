@@ -7,7 +7,7 @@ Every single one of them  must go through the following stages: First, the proje
     1. [Basic Info](#basic)
 2. [Planning and estimating](#planning)
     1. [Pivotal](#pivotal)
-     2. [Repository structure](#structure)
+    2. [Repository structure](#structure)
     3. [Pull Requests](#pr)
 3. [Executing and deploying](#execution)
 4. [Reviewing and analizing](#review)
@@ -23,9 +23,9 @@ Every project must start with a basic introduction to the team and a kick off me
     * Asigned team.
     * Day and hour for the weekly planning. 
     
-In addition, every project must have it's repository [^footnote] and a dedicated Slack channel.
+In addition, every project must have it's repository and a dedicated Slack channel.
 
-[^footnote]: Curently there are two plataforms in use: GitHub and GitLab, the selection of one over the other depends on the needs of the project in terms of communication wit the client.
+Currently there are two plataforms in use: GitHub and GitLab, the selection of one over the other depends on the needs of the project in terms of communication wit the client.
 
 ## Planning and Estimating <a name="planning"></a> 
 The first paragraph text 
@@ -41,5 +41,5 @@ This is a sub paragraph, formatted in heading 3 style
 ## Executing and deplying <a name="execution"></a>
 The second paragraph text
 
-## Review and  <a name="execution"></a>
+## Reviewing and analyzing <a name="review"></a>
 The second paragraph text
