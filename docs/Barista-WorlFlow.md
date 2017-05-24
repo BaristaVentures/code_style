@@ -30,7 +30,10 @@ Every project must start with a basic introduction to the team and a kick off me
     * Assigned team.
     * Day and hour for the weekly planning. 
     
-In addition, every project must have it's repository and a dedicated Slack channel.
+In addition, every project must have it's repository and two dedicated Slack channels:
+
+- team-<project>: *just* barista team envolved in the project.
+- <project>: barist a team and client.
 
 Currently there are two platforms in use: GitHub and GitLab, the selection of one over the other depends on the needs of the project in terms of communication wit the client.
 
