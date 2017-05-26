@@ -9,14 +9,12 @@ Status codes for common scenarios:
         - `200 Ok`: If the user exists in the db, should return the session token.
         - `201 Created`: The resource was created.
         - `202 Accepted`: The request was processed and will be processed asap
+        - `400 Bad request`: The request could not be understood by the server due to malformed syntax (i.e Invalid schema)
         - `401 Unauthorized`: If the social access token is invalid (checked with Facebook or Google SDK).
         - `403 Forbidden`: The user might be authenticated but does not have the necessary permissions
         - `404 Not Found`: The resource identifier is invalid or not recognized by the server
-        - `426`: If the client have an incompatible app version that needs to be updated
+        - `426`: If the client have an incompatible app version that needs to be updated (Force Update)
         - `412 Precondition Failed`: There is ho precondition guaranties to process the request (validations)
-
-* Force update:
-        - `426`: If the user have an app version that should be updated.
 
 Force updates
 -------------

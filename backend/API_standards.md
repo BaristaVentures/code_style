@@ -163,21 +163,25 @@ Instead we encourage the API consumer to upload file to S3 and provide the resul
 Each endpoint should have a shared [schema](https://github.com/plumatic/schema), entities reduction is encouraged so we all schemas can be match with entities on both backend and frontend.
 
 ## API Versioning
-TODO
+In general the API would be versioned via URL, we're aware of another mechanisms involving header parameters and other stuff, but we consider the URL versioning to be just easier to debug.
 
 ## Integration with 3rd party API's
-TODO
+All 3rd party integrations should be performed in the Barista Framework (when possible), to avoid repeated code across projects.
 
 ## OAuth
 TODO
 
 ## Logging
-TODO
+All logs should be use the standard Clojure logging, so far log4j is being used but others may be considered.
+Servers have to be configured to centralize logs on Papertrail.
+
+- `info` would  be used for general notifications, such as successful responses from 3rd party API's
+- `debug` would be used for unhandled errors and other exceptions
 
 ## Other topics
 
 ### Date/time timezones handling
-TODO
+`Date` data types should be avoided, all data should be persisted along with the timezone, to avoid possible issues with the API consumers timezone conversions.
 
-## Multilanguages
-TODO
+## Internationalization
+Internationalization would be handled by the API, all messages should be sent in the appropriates language for the authenticated user.
