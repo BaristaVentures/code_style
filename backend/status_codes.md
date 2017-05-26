@@ -16,6 +16,24 @@ Status codes for common scenarios:
         - `426`: If the client have an incompatible app version that needs to be updated (Force Update)
         - `412 Precondition Failed`: There is ho precondition guaranties to process the request (validations)
 
+Authorization
+-------------
+
+The `401 Unauthorized` error will follow the same error format and structure as every other endpoint of the API, in such case we will make use of the `reason` attribute in order to specify if the token expired (`token_expired`) or token was not provided (`token_non_provided`).
+
+Error example:
+```json
+{
+  "errors": [
+    {
+      "reason": "token_expired",
+      "title": "Invalid authorization token",
+      "message": "Invalid origin, the request has been refused"
+    }
+  ]
+}
+
+
 Force updates
 -------------
 
@@ -35,8 +53,7 @@ Force update errors will follow the same errors format and structure as every ot
 CORS errors
 -----------
 
-A `403 Forbidden`
-CORS errors will follow the same error format and structure as every other endpoint of the API.
+The `403 Forbidden` CORS error will follow the same error format and structure as every other endpoint of the API.
 
 Error example:
 ```json

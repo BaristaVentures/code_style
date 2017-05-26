@@ -65,7 +65,38 @@ Example:
 ```
 
 ### Pagination
-Pagination details would be sent as part of the same JSON object.
+Pagination details would be sent in the `meta` attribute, as part of the same JSON object.
+
+The backend currently support 2 kinds of pagination, index-based and scoped.
+
+- Index-based pagination allows the API client to get all resources greater than a given index identifier (i.e. infinite scrolls)
+- Scoped pagination allows the API client to know how many pages are remaining, and jump to an specific page forward or backwards
+
+When possible, index-based pagination would be preferred, mostly because it haves a much lower cost at the database level.
+
+Index-based pagination
+----------------------
+
+Suggested query string inputs, `page_size` and `lower_index`.
+
+Example `GET /questions?page_size=8&lower_index=4`
+
+Response Example:
+```json
+{
+  "meta": {
+            "current_index": 1
+          },
+  "questions": [
+                 {"id": 1, "description": "desc 1"},
+                 {"id": 2, "description": "desc 2"}
+               ]
+}
+```
+
+Scoped pagination
+-----------------
+
 Suggested query string inputs, `page_size` and `page_number`.
 
 Example `GET /questions?page_size=8&page_number=4`
@@ -83,6 +114,12 @@ Response Example:
                ]
 }
 ```
+
+### Error messages policies
+
+Each project should have a common shared error list, this will ensure every team member use the same wording and the code and reason are the same across frontend and backend.
+
+The structure for such file is simple: `Code, Title, Message`
 
 ### Error Handling
 
@@ -185,3 +222,6 @@ Servers have to be configured to centralize logs on Papertrail.
 
 ## Internationalization
 Internationalization would be handled by the API, all messages should be sent in the appropriates language for the authenticated user.
+
+## Seed data
+Each project should have a
