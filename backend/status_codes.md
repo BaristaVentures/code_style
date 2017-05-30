@@ -31,10 +31,26 @@ Error example:
     }
   ]
 }
-
+```
 
 Force updates
 -------------
+
+Error body sample:
+
+```json
+{
+  "errors": [
+    {
+      "title": "Error",
+      "message": "Your application needs to be updated."
+      "url": "http://url-to-open-each-client-store.com"
+    }
+  ]
+}
+```
+
+_NOTE:_ the `url` should be different per client.
 
 Clients should send the next headers on every request to our api:
 
