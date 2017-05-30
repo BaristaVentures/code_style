@@ -43,7 +43,7 @@ Error body sample:
   "errors": [
     {
       "title": "Error",
-      "message": "Your application needs to be updated."
+      "message": "Your application needs to be updated.",
       "url": "http://url-to-open-each-client-store.com"
     }
   ]
