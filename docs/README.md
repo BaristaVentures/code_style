@@ -4,4 +4,4 @@ Docs, guides and general info.
 
 ## Barista workflow
 
-- [Project workflow](project-workflow)
+- [Project workflow](project-workflow.md)
