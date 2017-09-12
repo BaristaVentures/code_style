@@ -54,7 +54,7 @@ All endpoints should return a seamless response, independent of the endpoint act
 
 ### Sessions
 
-To perform Login should be `POST /sessions` with email and password and it will returns an object with the auth information (token, expire date, etc) and the user information, everything inside of the payload key `data`.
+To perform Login should be `POST /sessions` with email and password and it will returns an object with the auth information (token, expire date, etc) and the user information, being same User entity as in the others endpoints, everything inside of the payload key `data`.
 
 Response example:
 
