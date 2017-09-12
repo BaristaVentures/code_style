@@ -52,14 +52,32 @@ Nested resources will follow the same pattern:
 
 All endpoints should return a seamless response, independent of the endpoint action or expected result values.
 
+### Sessions
+
+To perform Login should be `POST /sessions` with email and password and it will returns an object with the auth information (token, expire date, etc) and the user information, everything inside of the payload key `data`.
+
+Response example:
+
+```json
+{
+    "data": {
+      "auth_token": "qwerty123456",
+      "user": {
+        "name": "Jhon Doe",
+        "email": "Jhon.Doe@example.com"
+      }
+    }
+}
+```
+
 ### JSON object response
-Every endpoint should return a JSON object with the appropriate `payload key`, rather than  collection or plain values.
+Every endpoint should return a JSON object inside of the payload key `data` , rather than  collection or plain values.
 
 Example:
 
 ```json
 {
-  "questions": [{"id": 1, "description": "desc 1"},
+  "data": [{"id": 1, "description": "desc 1"},
                 {"id": 2, "description": "desc 2"}]
 }
 ```
@@ -87,7 +105,7 @@ Response Example:
   "meta": {
             "current_index": 1
           },
-  "questions": [
+  "data": [
                  {"id": 1, "description": "desc 1"},
                  {"id": 2, "description": "desc 2"}
                ]
@@ -108,7 +126,7 @@ Response Example:
             "total_pages": 5,
             "current_page": 1
           },
-  "questions": [
+  "data": [
                  {"id": 1, "description": "desc 1"},
                  {"id": 2, "description": "desc 2"}
                ]
