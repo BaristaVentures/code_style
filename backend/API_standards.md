@@ -236,7 +236,8 @@ Servers have to be configured to centralize logs on Papertrail.
 ## Other topics
 
 ### Date/time timezones handling
-`Date` data types should be avoided, all data should be persisted along with the timezone, to avoid possible issues with the API consumers timezone conversions.
+- Send/recieve dates as strings with ISO format: `yyyy-MM-dd'T'HH:mm:ss.SSS'Z'`.
+- `Date` data types should be avoided, all data should be persisted along with the timezone, to avoid possible issues with the API consumers timezone conversions.
 
 ## Internationalization
 Internationalization would be handled by the API, all messages should be sent in the appropriates language for the authenticated user.
