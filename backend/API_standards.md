@@ -146,6 +146,7 @@ All errors should follow the same structure, each error object in the collection
 The error object will always respond to the following attributes:
 - message
 - title
+- timestamp with `yyyy-MM-ddTHH:mm:ss.SSSZ`
 
 But other (optional) attributes could be added when needed
 - attribute
@@ -161,7 +162,8 @@ Not Found example:
   "errors": [
     {
       "title": "Resource not found",
-      "message": "User not found, please check your identifier"
+      "message": "User not found, please check your identifier",
+      "timestamp": "2018-03-12T18:30:00.SSSZ"
     }
   ]
 }
@@ -174,11 +176,13 @@ Validation error example:
     {
       "title": "Invalid format",
       "message": "The email haves an invalid format",
+      "timestamp": "2018-03-12T18:30:00.SSSZ"
       "attribute": "email"
     },
     {
       "title": "Invalid format",
       "message": "The password length should be at least 8 characters",
+      "timestamp": "2018-03-12T18:30:01.SSSZ"
       "attribute": "password"
     }
   ]
@@ -193,12 +197,14 @@ For those fields accepting collections, the error should point to the specific i
       "title": "Record not found",
       "message": "User not found, invalid identifier",
       "attribute": "user_ids",
+      "timestamp": "2018-03-12T18:30:00.SSSZ",
       "position": 1
     },
     {
       "title": "Duplicated record",
       "message": "The user was already associated with the book",
       "attribute": "user_ids",
+      "timestamp": "2018-03-12T18:30:00.SSSZ",
       "position": 2
     }
   ]
@@ -242,4 +248,4 @@ Servers have to be configured to centralize logs on Papertrail.
 Internationalization would be handled by the API, all messages should be sent in the appropriates language for the authenticated user.
 
 ## Seed data
-Each project should have a
+TODO
