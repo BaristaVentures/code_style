@@ -176,13 +176,13 @@ Validation error example:
     {
       "title": "Invalid format",
       "message": "The email haves an invalid format",
-      "timestamp": "2018-03-12T18:30:00.SSSZ"
+      "timestamp": "2018-03-12T18:30:00.SSSZ",
       "attribute": "email"
     },
     {
       "title": "Invalid format",
       "message": "The password length should be at least 8 characters",
-      "timestamp": "2018-03-12T18:30:01.SSSZ"
+      "timestamp": "2018-03-12T18:30:01.SSSZ",
       "attribute": "password"
     }
   ]
