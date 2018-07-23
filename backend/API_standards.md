@@ -208,7 +208,15 @@ For those fields accepting collections, the error should point to the specific i
 Validations will return status code `412` (precondition failed)
 
 ### Force updates
-Check [Backend document](readme.md) for more details about force updates handling.
+
+1. The behaviour for disallowed versions is: "the ones below the defined version".
+
+> Ignore mayor, minor or patch "standards/logics". (No semver or other kind of "standard" is been used)
+
+Example: let's `1.1.1` as force update version.
+`allowed`: `1.1.2` or `1.2.1` or `2.1.1`
+`disallowed`: `1.1.0` or `1.0.1` or `0.1.1`
+
 
 ### Uploads
 Multipart and binary block uploads should be avoided at all cost.
