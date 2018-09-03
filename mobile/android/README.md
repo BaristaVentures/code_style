@@ -1,74 +1,24 @@
 Barista Android Styles
-======================
+==========================
 
-# Table of Contents
+Check out the [dev-flow](def-flow.md) to learn about branching and development flow.
 
-* [Bug Report](bug_report.md)
-* [Development Flow](dev-flow.md)
-* [Changelog](changelog.md)
-* [Development Flow](dev-flow.md)
-* [Android Studio settings](#android_studio)
-* [Git Ignore](#gitignore)
-* [File Names](#file_names)
-* [Res folder](#res_folder)
-	* [Layouts](#layouts)
-* [Bug Report](bug_report.md)
-* [License](#license)
-* [Inspiration](#inspiration)
+Important files on each project:
+- `dependencies.gradle`: all dependencies with versions.
+- `CHANGELOG.md`: each deployed changes description.
+- `README.md`: explanation for the project.
+- `scripts/`: helpers for the project.
 
-<a name="android_studio"/>
-# Android Studio clean/autoformat settings
 
-IntelliJ IDEA code style settings for Null Industries's Java and Android projects. 
-Setup files and [install help](android_studio_settings/README.md) are in `android_studio_settings/`.
+# Code style
+Follow the next conventions:
+- `android_studio_settings/`: barista code style for android studio.
+- [kotlin-style](https://android.github.io/kotlin-guides/style.html)
+- [coding-conventions](http://kotlinlang.org/docs/reference/coding-conventions.html)
 
-<a name="gitignore"/>
-# Gitignore
 
-Put [.gitignore](.gitignore) file on root for every project.
-
-<a name="file_names"/>
-# File Names
-
-Class names are written in [UpperCamelCase](http://en.wikipedia.org/wiki/CamelCase). 
-
-For classes that extend an Android component, the name of the class should end with the name of the component; for example: `SignInActivity`, `SignInFragment`, `ImageUploaderService`, `ChangePasswordDialog`.
-
-<a name="res_folder"/>
-# Res folder
-
-Explain how `app/src/main/res` folder is managed.
-
-1. Every resource/id/string_name should be in __lowercase_underscore__.
-1. 
-
-<a name="layouts"/>
-## Layouts
-
-Layout files should match the name of the Android components that they are intended for but moving the top level component name to the beginning. For example, if we are creating a layout for the `SignInActivity`, the name of the layout file should be `sign_in_activity.xml`.
-
-|     Component    |       Class Name       |          Layout Name         |
-|:----------------:|:----------------------:|:----------------------------:|
-| Activity         | `UserProfileActivity`  | `user_profile_activity.xml`  |
-| Fragment         | `SignUpFragment`       | `sign_up_fragment.xml`       |
-| Dialog           | `ChangePasswordDialog` | `change_password_dialog.xml` |
-| AdapterView item | ---                    | `person_item.xml`            |
-| Partial layout   | ---                    | `stats_bar_partial.xml`      |
-
-<a name="strings"/>
-
-## Values
-
-Resource files in the values folder should be *plural*, e.g. `strings.xml`, `styles.xml`, `colors.xml`, `dimens.xml`, `attrs.xml`
-
-<a name="license"/>
-# License
-
-[![Public domain](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/legalcode)
-
-<a name="inspiration"/>
-# Inspiration
-
+## Other styles
+To consider for the future:
 - [Square code style](https://github.com/square/java-code-styles)
 - [Google Android Source code style](https://source.android.com/source/code-style.html)
 - [Google intellij java style guide](https://raw.githubusercontent.com/google/styleguide/gh-pages/intellij-java-google-style.xml)
