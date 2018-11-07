@@ -8,4 +8,7 @@ Docs, guides and general info.
 
 ## Logging
 
-Use "[APP][<FILE>][<METHOD>]" as log tag or prefix for each `log.print`.
+Use "[APP][FILE][METHOD]" as log tag or prefix for each `log.print`.
+
+Example:
+> [Sniffle][SubscriptionController][getSubscriptions] something happened in here.
