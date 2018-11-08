@@ -12,3 +12,9 @@ Use "[APP][FILE][METHOD]" as log tag or prefix for each `log.print`.
 
 Example:
 > [Sniffle][SubscriptionController][getSubscriptions] something happened in here.
+
+## Code Comments
+
+Do not comment private functions/attributes [detekt/comments](https://arturbosch.github.io/detekt/comments.html#commentoverprivatefunction) because function name should be self explanatory.
+
+Use comments only when necesary.
